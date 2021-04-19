@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Search = () => {
+const Search = ({placeholder,counter,handleChange}) => {
+
     return(
         <div>
-            <p>Auto refresh in 0 seconds</p>
-            <input/>
+            <p>{counter}</p>
+            <input placeholder={placeholder} onChange={handleChange}/>
         </div>
     )
 }

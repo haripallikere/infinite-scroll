@@ -1,11 +1,16 @@
 import react from 'react';
+import './data-container.css';
 
-const DisplayFetchData = ({articles}) => {
-    console.log(articles)
+const DisplayFetchData = ({article}) => {
+
     return (
-        <div>
-            Display content
-        </div>
+        <>
+        <div className="data-container">            
+            <img className="image" src={article && article.urlToImage ? article.urlToImage : ""} ></img>
+            <p>{article && article.title ? article.title : ''}</p>            
+        </div> 
+        </>
+        
     )
 }
 

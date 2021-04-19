@@ -1,0 +1,12 @@
+.data-container{
+    display: flex;
+    margin: 25px 0 0 100px;
+    
+    /* flex-direction: row; */
+}
+
+.image {
+    margin-right: 25px;;
+    height: 300px;
+    width: 300px;
+}
