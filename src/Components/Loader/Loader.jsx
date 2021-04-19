@@ -7,20 +7,24 @@ const Loader = ({limit}) => {
     console.log(limit)
 const Load = () => {
     
-    for (let i =0; i<limit; i++) {
         return   (
-           
+            <div>
             <div className='loader'>
             <img  alt="placeholder"/>
             <p></p>
-        </div>
+            </div>
+            </div>
         )
     
-    }
+    
 }
     return (
         <>
-        <Load/>
+        {[...Array(limit)].map((v,i) => {
+            return (
+                <Load key={i}/>
+            )
+        })}
         </>
     )
 }

@@ -1,12 +1,21 @@
 import React from 'react';
+import '../Search/search.scss';
+import { FiSearch } from 'react-icons/fi';
 
-const Search = ({placeholder,counter,handleChange}) => {
+
+const Search = ({placeholder,counter,handleChange,handleSubmit}) => {
 
     return(
-        <div>
-            <p>{counter}</p>
-            <input placeholder={placeholder} onChange={handleChange}/>
-        </div>
+        <form className='search' onSubmit={handleSubmit}>
+            <input 
+            placeholder={placeholder} 
+            value={placeholder} 
+            onChange={handleChange} 
+             
+            />
+            <button type='submit'>  <FiSearch/></button>   
+            <p>auto refresh in {counter}</p>
+        </form>
     )
 }
 
